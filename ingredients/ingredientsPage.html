@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lasagna</title>
+    <link rel="stylesheet" type="text/css" href="../css/markup.css" />
+    <script src="../js/magic.js"></script>
+</head>
+<body>
+    <div class = "nextPageDiv">
+        <p class = "nextPageTitle">What's good?</p>
+        <p class = "nextPageText">“Bacon ipsum dolor amet jowl tongue swine drumstick ball tip filet mignon. Fatback short loin sirloin meatball jerky. Short loin kevin capicola porchetta beef ribs t-bone prosciutto, alcatra picanha jowl. Sausage venison shankle cow leberkas alcatra, shank ham hock turducken ground round pork belly. Swine pork bacon sirloin pancetta meatball tail capicola sausage kevin. Tongue short ribs picanha landjaeger bacon fatback pork loin capicola kielbasa ribeye cow burgdoggen. Pig pork porchetta, bacon meatball fatback pancetta ground round turkey frankfurter pork belly shank brisket beef.”
+        </p>
+        <div>
+            <a target = "_blank" href = "https://goo.gl/maps/pF4t2WcEgFC2">
+                <img class = "nextButton" src = "../images/thumbnail_Button-Letsgo.png"/>
+            </a>
+        </div>
+        <p class = "nextPageTitle">Picsss!</p>
+        <div>
+            <img class = "picsss" src = "../images/gallery1.png"/>
+            <img class = "picsss" src = "../images/gallery2.png"/>
+            <img class = "picsss" src = "../images/gallery3.png"/>
+            <img class = "picsss" src = "../images/gallery4.png"/>
+        </div>
+        <p class = "nextPageTitle">Reviews</p>
+        <p class = "nextPageText">“Hamburger tongue leberkas ball tip, sausage ribeye kielbasa cupim tri-tip biltong ham shank jowl pork. Tongue filet mignon kielbasa short ribs ribeye meatloaf pork cupim rump. Pork loin cow tongue strip steak jowl shankle. - Anon”</p>
+        <div>
+            <!-- <a target = "_blank"  href = "../ingredients/reviewPage.html">
+                <img class = "reviewButton" src = "../images/thumbnail_Button-Review.png"/>
+            </a> -->
+
+            <button type = "submit" class = "reviewButton" onclick = "openPopup(),refresh()">
+                <img class = "reviewButton" src = "../images/thumbnail_Button-Review.png"/>
+            </button>
+            <div class ="popup" id = "popup">
+                <button id = "b1" onclick = "rev1()">
+                    <img src = "../images/thumbnail_Star.png"/>
+                </button>
+                <button id = "b2" onclick="rev2()">
+                    <img src = "../images/thumbnail_Star.png"/>
+                </button>
+                <button id = "b3" onclick = "rev3()">
+                    <img src = "../images/thumbnail_Star.png"/>
+                </button>
+                <button id = "b4" onclick = "rev4()">
+                    <img src = "../images/thumbnail_Star.png"/>
+                </button>
+                <button id = "b5" onclick = "rev5()">
+                    <img src = "../images/thumbnail_Star.png"/>
+                </button>
+
+                <button type = "submit" class = "submitButton" onclick = "closePopup()">
+                    <img src = "../images/thumbnail_Button-Submit.png"/>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let popup = document.getElementById("popup");
+        function openPopup() {
+        console.log("hello");
+        popup.classList.add("open-popup");
+        };
+
+        function closePopup() {
+        popup.classList.remove("open-popup");
+        console.log("goodbye");
+        };
+
+        let r1 = document.getElementById("b1");
+        let r2 = document.getElementById("b2");
+        let r3 = document.getElementById("b3");
+        let r4 = document.getElementById("b4");
+        let r5 = document.getElementById("b5");
+
+        function rev1() {
+            r1.classList.add("changeStar");
+        }
+        function rev2() {
+            r1.classList.add("changeStar");
+            r2.classList.add("changeStar");
+        }
+        function rev3() {
+            r1.classList.add("changeStar");
+            r2.classList.add("changeStar");
+            r3.classList.add("changeStar");
+        }
+        function rev4() {
+            r1.classList.add("changeStar");
+            r2.classList.add("changeStar");
+            r3.classList.add("changeStar");
+            r4.classList.add("changeStar");
+        }
+        function rev5() {
+            r1.classList.add("changeStar");
+            r2.classList.add("changeStar");
+            r3.classList.add("changeStar");
+            r4.classList.add("changeStar");
+            r5.classList.add("changeStar");
+
+        }
+        function refresh() {
+            r1.classList.remove("changeStar");
+            r2.classList.remove("changeStar");
+            r3.classList.remove("changeStar");
+            r4.classList.remove("changeStar");
+            r5.classList.remove("changeStar");
+        }
+
+
+    </script>
+</body>
+</html>
